@@ -1,0 +1,104 @@
+// breakpoints
+$phones: 600px;
+  $portrait_tablets: 768px;
+$tablets: 992px;
+$desktops: 1200px;
+$large_desktops: 1600px;
+
+// colors
+$soft-orange: hsl(35, 77%, 62%);
+$soft-red: hsl(5, 85%, 63%);
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Inter:400,700,800);
+$font-size: 1.7svh;
+$font-family: 'Inter', sans-serif;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: normal;
+  font-size: $font-size;
+  color: $dark-grayish-blue;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  right: 10%;
+  @media (max-width: $phones) {
+    left: 2%;
+    top: 2%;
+    right: 2%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  color: $very-dark-blue;
+  line-height: 3.2rem;
+  @media (min-width: $large_desktops) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  color: $soft-orange;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h3 {
+  color: $off-white;
+  font-weight: 800;
+  font-size: 1rem;
+  &:hover {
+    color: $soft-orange;
+    cursor: pointer;
+  }
+}
+
+h4 {
+    color: $grayish-blue;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+h5 {
+    color: $very-dark-blue;
+    font-weight: 800;
+    font-size: 0.95rem;
+  &:hover {
+    color: $soft-red;
+    cursor: pointer;
+  }
+}
+
+button {
+  border: none;
+}
+
+.button {
+  background-color: $soft-red;
+  font-family: $font-family;
+  color: $off-white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+    letter-spacing: 0.2rem;
+    padding: 1rem 1.5rem;
+  &:hover {
+    background-color: $very-dark-blue;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,86 @@
+@use "bases";
+
+nav {
+  display: flex;
+    justify-content: space-between;
+  margin-bottom: 3rem;
+    align-items: center;
+}
+
+img {
+  width: 3.5rem;
+}
+
+.links {
+  width: 40%;
+  font-size: 0.9rem;
+  display: flex;
+    justify-content: space-between;
+  @media (max-width: bases.$tablets) {
+    width: 60%;
+  }
+  @media (max-width: bases.$phones) {
+    display: none !important;
+  }
+  a {
+    color: bases.$dark-grayish-blue;
+    text-decoration: none;
+    &:hover {
+      color: bases.$soft-red;
+    }
+  }
+}
+
+
+.hamburger {
+  display: none !important;
+  @media (max-width: bases.$phones) {
+    display: grid !important;
+    cursor: pointer;
+    grid-area: 1 / 1 / 2 / 3;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right:  0;
+  background-color: bases.$off-white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 15px;
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: bases.$very-dark-blue ;
+    display: block;
+    transition: 0.3s;
+    margin-top: 0.8rem;
+    &:hover {
+      color: bases.$soft-red;
+    }
+  }
+  .close_sidenav {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+.sidebar_link {
+  margin-top: 7rem !important;
+}

@@ -1,0 +1,31 @@
+@use "bases";
+
+.news {
+    background-color: bases.$very-dark-blue;
+    padding: 0 1rem;
+    height: 100%;
+    overflow: auto;
+}
+
+h2 {
+    margin: 1.5rem 0.5rem;
+}
+
+h3 {
+    &:is(:first-child) {
+        margin: -0.2rem 0;
+    }
+    margin: 2rem 0;
+}
+
+.news_item {
+    color: bases.$grayish-blue;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+    &:not(:last-child) {
+        border-bottom: 1px solid bases.$grayish-blue;
+    }
+}
